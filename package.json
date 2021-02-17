@@ -10,6 +10,7 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.84.2",
     "sqlite3": "5.0.0"
   },
   "scripts": {
@@ -24,5 +25,8 @@
         }
       }
     }
-  }
+  },
+  "sapux": [
+    "app/todo_list"
+  ]
 }

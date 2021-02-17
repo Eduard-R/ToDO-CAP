@@ -1,6 +1,7 @@
-using {TodoService} from '../srv/service';
+using TodoService as service from '../../srv/service';
+
 using from '@sap/cds/common';
-using from '../db/schema';
+using from '../../db/schema';
 
 annotate TodoService.Todos with @odata.draft.enabled;
 
