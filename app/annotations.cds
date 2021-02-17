@@ -6,10 +6,9 @@ annotate TodoService.Todos with @odata.draft.enabled;
 
 annotate TodoService.Todos with {
     title @(Common.Label : 'Titel');
-    date  @(Common.Label : 'Datum');
-    time  @(Common.Label : 'Uhrzeit');
+    date  @(Common.Label : 'Fälligkeitsdatum');
+    time  @(Common.Label : 'Fälligkeitsuhrzeit');
     text  @(Common.Label : 'Aufgabenbeschreibung');
-
 };
 
 annotate TodoService.Todos with @UI : {
@@ -37,7 +36,9 @@ annotate TodoService.Todos with @UI : {
     FieldGroup #Details : {Data : [
         {Value : text},
         {Value : date},
-        {Value : time}
+        {Value : time},
+        {Value : createdAt},
+        {Value : createdBy}
         
         ]
 

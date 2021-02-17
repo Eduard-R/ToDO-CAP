@@ -14,5 +14,15 @@
   },
   "scripts": {
     "start": "cds watch --in-memory"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/tododb"
+        }
+      }
+    }
   }
 }
