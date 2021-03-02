@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^4",
+    "@sap/cds-dk": "^3.4.1",
     "express": "^4"
   },
   "devDependencies": {
@@ -20,9 +21,7 @@
     "requires": {
       "db": {
         "kind": "sqlite",
-        "credentials": {
-          "database": "db/tododb"
-        }
+        "model": "*"
       }
     }
   },
