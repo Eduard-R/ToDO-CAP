@@ -38,7 +38,7 @@ entity Ereignisse : cuid, managed {
     dauer           : Integer;
     art             : Art; // ValueList
     ort             : Ort; // ValueList (Augen)
-    zeitpunkt       : Zeitpunkt; // ValueList - Morgens, Mittagds, Abends, Nachts
+    zeitpunkt       : Zeitpunkt; // ValueList - Morgens, Mittags, Abends, Nachts
     vorbote         : Vorbote; // ValueList
     symptom1        : Symptom1; // ValueList
     symptom2        : Symptom2; // ValueList
