@@ -1,6 +1,7 @@
 using {
     cuid,
-    managed
+    managed,
+    sap
 } from '@sap/cds/common';
 
 namespace verri;
@@ -19,7 +20,7 @@ using Symptom6 from '../srv/common';
 using Wirkung from '../srv/common';
 using Zeitpunkt from '../srv/common';
 
-// Todo Liste
+// Todo App
 entity Todos : cuid, managed {
     title : String @UI.Placeholder : 'Aufgabe';
     date  : Date;
@@ -30,7 +31,7 @@ entity Todos : cuid, managed {
     };
 }
 
-// Kopfschmerzkalender
+// Kopfschmerzkalender App
 entity Ereignisse : cuid, managed {
     title           : Date;
     ausloeser       : Ausloeser; // ValueList

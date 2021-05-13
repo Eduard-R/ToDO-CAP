@@ -1,4 +1,4 @@
-using TodoService as service from '../../srv/service';
+using TodoService from '../../srv/todo-service';
 
 using from '@sap/cds/common';
 using from '../../db/schema';
