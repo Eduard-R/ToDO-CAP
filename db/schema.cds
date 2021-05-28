@@ -19,8 +19,9 @@ using Symptom5 from '../srv/common';
 using Symptom6 from '../srv/common';
 using Wirkung from '../srv/common';
 using Zeitpunkt from '../srv/common';
+using Faktura from '../srv/common';
 
-// Todo App
+// Todo App ////////////////////////////////////////////
 entity Todos : cuid, managed {
     title : String @UI.Placeholder : 'Aufgabe';
     date  : Date;
@@ -31,23 +32,33 @@ entity Todos : cuid, managed {
     };
 }
 
-// Kopfschmerzkalender App
+// Kopfschmerzkalender App //////////////////////////////
 entity Ereignisse : cuid, managed {
     title           : Date;
-    ausloeser       : Ausloeser; // ValueList
-    staerke         : Staerke; // ValueList
+    ausloeser       : Ausloeser;
+    staerke         : Staerke;
     dauer           : Integer;
-    art             : Art; // ValueList
-    ort             : Ort; // ValueList (Augen)
-    zeitpunkt       : Zeitpunkt; // ValueList - Morgens, Mittags, Abends, Nachts
-    vorbote         : Vorbote; // ValueList
-    symptom1        : Symptom1; // ValueList
-    symptom2        : Symptom2; // ValueList
-    symptom3        : Symptom3; // ValueList
-    symptom4        : Symptom4; // ValueList
-    symptom5        : Symptom5; // ValueList
-    symptom6        : Symptom6; // ValueList
+    art             : Art;
+    ort             : Ort;
+    zeitpunkt       : Zeitpunkt;
+    vorbote         : Vorbote;
+    symptom1        : Symptom1;
+    symptom2        : Symptom2;
+    symptom3        : Symptom3;
+    symptom4        : Symptom4;
+    symptom5        : Symptom5;
+    symptom6        : Symptom6;
     medikamenttext  : String;
     medikamentmenge : Integer;
-    wirkung         : Wirkung; // ValueList
+    wirkung         : Wirkung;
+}
+
+// Projektzeiterfassung /////////////////////////////////
+entity Projekte : cuid, managed {
+    projektNummer : String;
+    projektName   : String;
+    kunde         : String;
+    faktura       : Faktura;
+    stunden       : Time;
+    taetigkeit    : String;
 }

@@ -13,12 +13,15 @@ type Symptom5 : Association to verri.common.Symptom5;
 type Symptom6 : Association to verri.common.Symptom6;
 type Wirkung : Association to verri.common.Wirkung;
 type Zeitpunkt : Association to verri.common.Zeitpunkt;
+type Faktura : Association to verri.common.Faktura;
+
 
 context verri.common {
 
     entity Ausloeser : CodeList {
         key name : String;
     }
+
     entity Zeitpunkt : CodeList {
         key name : String;
     }
@@ -67,6 +70,10 @@ context verri.common {
         key name : String;
     }
 
+    entity Faktura : CodeList {
+        key name : String;
+    }
+
     aspect CodeList @(
         cds.autoexpose,
         cds.persistence.skip : 'if-unused'
@@ -79,6 +86,7 @@ annotate Ausloeser with @(
     title       : 'Auslöser',
     description : 'Beschreibung'
 );
+
 annotate Zeitpunkt with @(
     title       : 'Zeitpunkt',
     description : 'Beschreibung'
@@ -136,5 +144,10 @@ annotate Symptom6 with @(
 
 annotate Wirkung with @(
     title       : 'Wirkung des Medikamentes',
+    description : 'Beschreibung'
+);
+
+annotate Faktura with @(
+    title       : 'Faktura',
     description : 'Beschreibung'
 );
