@@ -1,0 +1,1 @@
+using KalenderService as service from '../../srv/kalender-service';

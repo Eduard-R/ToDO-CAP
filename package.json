@@ -11,7 +11,7 @@
     "express": "^4"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.84.2",
+    "@sap/ux-specification": "^1.90.0",
     "sqlite3": "5.0.0"
   },
   "scripts": {
@@ -26,6 +26,8 @@
     }
   },
   "sapux": [
-    "app/todo_list"
+    "app/todo_list",
+    "app/kopfschmerzkalender",
+    "app/projektzeiterfassung"
   ]
 }
