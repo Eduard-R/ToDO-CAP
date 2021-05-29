@@ -6,20 +6,20 @@ using {
 
 namespace verri;
 
-using Ausloeser from '../srv/common';
-using Staerke from '../srv/common';
-using Art from '../srv/common';
-using Ort from '../srv/common';
-using Vorbote from '../srv/common';
-using Symptom1 from '../srv/common';
-using Symptom2 from '../srv/common';
-using Symptom3 from '../srv/common';
-using Symptom4 from '../srv/common';
-using Symptom5 from '../srv/common';
-using Symptom6 from '../srv/common';
-using Wirkung from '../srv/common';
-using Zeitpunkt from '../srv/common';
-using Faktura from '../srv/common';
+using Ausloeser from '../srv/valuelist';
+using Staerke from '../srv/valuelist';
+using Art from '../srv/valuelist';
+using Ort from '../srv/valuelist';
+using Vorbote from '../srv/valuelist';
+using Symptom1 from '../srv/valuelist';
+using Symptom2 from '../srv/valuelist';
+using Symptom3 from '../srv/valuelist';
+using Symptom4 from '../srv/valuelist';
+using Symptom5 from '../srv/valuelist';
+using Symptom6 from '../srv/valuelist';
+using Wirkung from '../srv/valuelist';
+using Zeitpunkt from '../srv/valuelist';
+using Faktura from '../srv/valuelist';
 
 // Todo App ////////////////////////////////////////////
 entity Todos : cuid, managed {

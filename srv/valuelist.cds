@@ -1,22 +1,22 @@
-// Mehrfach verwendete Entities / ValueLists
+// Mehrfach verwendete ValueLists
 
-type Ausloeser : Association to verri.common.Ausloeser;
-type Staerke : Association to verri.common.Staerke;
-type Art : Association to verri.common.Art;
-type Ort : Association to verri.common.Ort;
-type Vorbote : Association to verri.common.Vorbote;
-type Symptom1 : Association to verri.common.Symptom1;
-type Symptom2 : Association to verri.common.Symptom2;
-type Symptom3 : Association to verri.common.Symptom3;
-type Symptom4 : Association to verri.common.Symptom4;
-type Symptom5 : Association to verri.common.Symptom5;
-type Symptom6 : Association to verri.common.Symptom6;
-type Wirkung : Association to verri.common.Wirkung;
-type Zeitpunkt : Association to verri.common.Zeitpunkt;
-type Faktura : Association to verri.common.Faktura;
+type Ausloeser : Association to verri.valuelist.Ausloeser;
+type Staerke : Association to verri.valuelist.Staerke;
+type Art : Association to verri.valuelist.Art;
+type Ort : Association to verri.valuelist.Ort;
+type Vorbote : Association to verri.valuelist.Vorbote;
+type Symptom1 : Association to verri.valuelist.Symptom1;
+type Symptom2 : Association to verri.valuelist.Symptom2;
+type Symptom3 : Association to verri.valuelist.Symptom3;
+type Symptom4 : Association to verri.valuelist.Symptom4;
+type Symptom5 : Association to verri.valuelist.Symptom5;
+type Symptom6 : Association to verri.valuelist.Symptom6;
+type Wirkung : Association to verri.valuelist.Wirkung;
+type Zeitpunkt : Association to verri.valuelist.Zeitpunkt;
+type Faktura : Association to verri.valuelist.Faktura;
 
 
-context verri.common {
+context verri.valuelist {
 
     entity Ausloeser : CodeList {
         key name : String;
@@ -80,7 +80,7 @@ context verri.common {
     ) {}
 }
 
-annotate verri.common.CodeList with @cds.odata.valuelist;
+annotate verri.valuelist.CodeList with @cds.odata.valuelist;
 
 annotate Ausloeser with @(
     title       : 'Auslöser',
