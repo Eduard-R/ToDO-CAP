@@ -58,7 +58,14 @@ entity Projekte : cuid, managed {
     projektNummer : String;
     projektName   : String;
     kunde         : String;
-    faktura       : Faktura;
-    stunden       : Time;
-    taetigkeit    : String;
+    zeiterfassung : Composition of many Zeiterfassungen
+                        on zeiterfassung.projekt = $self;
+}
+
+entity Zeiterfassungen : cuid, managed {
+    faktura    : Faktura;
+    datum      : Date;
+    stunden    : Integer;
+    taetigkeit : String;
+    projekt    : Association to Projekte;
 }
