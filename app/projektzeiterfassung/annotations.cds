@@ -68,10 +68,6 @@ annotate ProjektService.Projekte with @UI : {
             },
             {
                 $Type : 'UI.DataField',
-                Value : projektName,
-            },
-            {
-                $Type : 'UI.DataField',
                 Value : kunde,
             },
             {
