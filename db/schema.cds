@@ -22,44 +22,47 @@ using Zeitpunkt from '../srv/valuelist';
 using Faktura from '../srv/valuelist';
 
 // Todo App ////////////////////////////////////////////
-entity Todos : cuid, managed {
-    title : String @UI.Placeholder : 'Aufgabe';
-    date  : Date;
-    time  : Time;
-    text  : String @UI             : {
-        MultiLineText,
-        Placeholder : 'Beschreibung der Aufgabe'
-    };
+entity Todos : managed {
+    key ID    : UUID   @Core.Computed;
+        title : String @UI.Placeholder : 'Aufgabe';
+        date  : Date;
+        time  : Time;
+        text  : String @UI             : {
+            MultiLineText,
+            Placeholder : 'Beschreibung der Aufgabe'
+        };
 }
 
 // Kopfschmerzkalender App //////////////////////////////
-entity Ereignisse : cuid, managed {
-    title           : Date;
-    ausloeser       : Ausloeser;
-    staerke         : Staerke;
-    dauer           : Integer;
-    art             : Art;
-    ort             : Ort;
-    zeitpunkt       : Zeitpunkt;
-    vorbote         : Vorbote;
-    symptom1        : Symptom1;
-    symptom2        : Symptom2;
-    symptom3        : Symptom3;
-    symptom4        : Symptom4;
-    symptom5        : Symptom5;
-    symptom6        : Symptom6;
-    medikamenttext  : String;
-    medikamentmenge : Integer;
-    wirkung         : Wirkung;
+entity Ereignisse : managed {
+    key ID              : UUID @Core.Computed;
+        title           : Date;
+        ausloeser       : Ausloeser;
+        staerke         : Staerke;
+        dauer           : Integer;
+        art             : Art;
+        ort             : Ort;
+        zeitpunkt       : Zeitpunkt;
+        vorbote         : Vorbote;
+        symptom1        : Symptom1;
+        symptom2        : Symptom2;
+        symptom3        : Symptom3;
+        symptom4        : Symptom4;
+        symptom5        : Symptom5;
+        symptom6        : Symptom6;
+        medikamenttext  : String;
+        medikamentmenge : Integer;
+        wirkung         : Wirkung;
 }
 
 // Projektzeiterfassung /////////////////////////////////
-entity Projekte : cuid, managed {
-    projektNummer : String;
-    projektName   : String;
-    kunde         : String;
-    zeiterfassung : Composition of many Zeiterfassungen
-                        on zeiterfassung.projekt = $self;
+entity Projekte : managed {
+    key ID            : UUID @Core.Computed;
+        projektNummer : String;
+        projektName   : String;
+        kunde         : String;
+        zeiterfassung : Composition of many Zeiterfassungen
+                            on zeiterfassung.projekt = $self;
 }
 
 entity Zeiterfassungen : cuid, managed {
