@@ -51,8 +51,9 @@ entity Ereignisse : managed {
         symptom5        : Symptom5;
         symptom6        : Symptom6;
         medikamenttext  : String;
-        medikamentmenge : Integer;
+        medikamentmenge : String;
         wirkung         : Wirkung;
+        bemerkung       : String;
 }
 
 // Projektzeiterfassung /////////////////////////////////
