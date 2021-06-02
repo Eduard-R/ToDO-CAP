@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF=8" />
+    <title>{{appTitle}}</title>
+
+    <script>
+        window['sap-ushell-config'] = {
+            defaultRenderer: 'fiori2',
+            applications: {
+                'app-todo': {
+                    title: 'Aufgaben Planer',
+                    description: 'Aufgaben',
+                    additionalInformation: 'SAPUI5.Component=todolist',
+                    applicationType: 'URL',
+                    url: '/todo_list/webapp',
+                    navigationMode: 'embedded'
+                },
+                'app-migraene': {
+                    title: 'Kopfschmerz Kalender',
+                    description: 'Kopfschmerzkalender',
+                    additionalInformation: 'SAPUI5.Component=kopfschmerzkalender',
+                    applicationType: 'URL',
+                    url: '/kopfschmerzkalender/webapp',
+                    navigationMode: 'embedded'
+                },
+                'app-projekte': {
+                    title: 'Projektzeit Erfassung',
+                    description: 'Projekte',
+                    additionalInformation: 'SAPUI5.Component=projektzeiterfassung',
+                    applicationType: 'URL',
+                    url: '/projektzeiterfassung/webapp',
+                    navigationMode: 'embedded'
+                },
+            }
+        };
+    </script>
+
+    <script src="https://ui5.sap.com/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+
+    <script src="https://ui5.sap.com/resources/sap-ui-core.js" data-sap-ui-libs="sap.m, sap.ushell, sap.fe.templates"
+        data-sap-ui-compatVersion="edge" data-sap-ui-theme="sap_fiori_3" data-sap-ui-frameOptions="allow"
+        data-sap-ui-bindingSyntax="complex"></script>
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ushell.Container.createRenderer().placeAt('content');
+        });
+    </script>
+
+</head>
+
+<body class="sapUiBody" id="content">
+
+</body>
+
+</html>
