@@ -83,7 +83,7 @@ annotate ProjektService.Projekte with @UI : {
 annotate ProjektService.Zeiterfassungen with @UI : {LineItem : [
     {
         $Type : 'UI.DataField',
-        Value : faktura_name,
+        Value : faktura,
     },
     {
         $Type : 'UI.DataField',

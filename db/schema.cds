@@ -19,7 +19,7 @@ using Symptom5 from '../srv/valuelist';
 using Symptom6 from '../srv/valuelist';
 using Wirkung from '../srv/valuelist';
 using Zeitpunkt from '../srv/valuelist';
-using Faktura from '../srv/valuelist';
+// using Faktura from '../srv/valuelist';
 
 // Todo App ////////////////////////////////////////////
 entity Todos : managed {
@@ -67,9 +67,9 @@ entity Projekte : managed {
 }
 
 entity Zeiterfassungen : cuid, managed {
-    faktura    : Faktura;
+    faktura    : Boolean default false;
     datum      : Date;
-    stunden    : Integer;
+    stunden    : Decimal;
     taetigkeit : String;
     projekt    : Association to Projekte;
 }
